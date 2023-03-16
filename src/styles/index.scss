@@ -1,0 +1,160 @@
+@import "~normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+
+///
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #fff;
+  font-family: Nunito;
+  background-color: rgb(17, 17, 17);
+}
+input,
+textarea {
+  outline: none;
+}
+///
+.mainWrapper {
+  max-width: 1920px;
+  padding-bottom: 5rem;
+}
+.newCommentContainer {
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 1.5rem 2rem;
+  width: 50rem;
+  border-radius: 0.5rem;
+  background-color: #4141415e;
+  box-shadow: 0px 0px 10px 5px #696969;
+  transition: 0.3s box-shadow ease-in-out;
+}
+.newCommentTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 18px;
+}
+.newCommentName__Date {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  & input {
+    display: block;
+    height: 2rem;
+    background-color: #cccccc00;
+    border: 1px solid #3e3e3e;
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.5rem;
+    margin-top: 1rem;
+    transition: 0.2s border-color ease-in-out;
+    color: #7e7e7e;
+    &:focus {
+      border-color: #7e7e7e;
+    }
+    &::placeholder {
+      color: #636363;
+    }
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+}
+.newCommentTextContainer {
+  position: relative;
+}
+.newCommentText {
+  resize: none;
+  width: 100%;
+  min-height: 5rem;
+  background-color: #cccccc00;
+  border: 1px solid #3e3e3e;
+  border-radius: 0.3rem;
+  padding: 0.4rem 0.5rem;
+  margin-top: 1rem;
+  transition: 0.2s border-color ease-in-out;
+  color: #7e7e7e;
+  &:focus {
+    border-color: #7e7e7e;
+  }
+  &::placeholder {
+    color: #636363;
+  }
+}
+.newCommentSubmitBtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  & button {
+    border-radius: 1rem;
+    cursor: pointer;
+    width: 10rem;
+    height: 2rem;
+    transition: 0.2s all ease-in-out;
+    color: #4cbe00;
+    border: 1px solid #4cbe00;
+    background-color: #cccccc00;
+    &:hover {
+      color: #66ff00;
+      border-color: #66ff00;
+      box-shadow: 0px 0px 10px 5px #2271008a;
+    }
+  }
+}
+.commentContainer {
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  width: 50rem;
+  border-radius: 0.5rem;
+  color: #7e7e7e;
+  background-color: #4141415e;
+  box-shadow: 0px 0px 10px 5px #696969;
+}
+.commentHeaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: calc(0.5rem - 1px);
+  padding-right: calc(0.5rem - 1px);
+}
+.commentText {
+  margin-top: 1rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid #3e3e3e;
+}
+.footerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  & img {
+    width: 30px;
+    cursor: pointer;
+    transition: 0.2s transform ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+.notLikeImg {
+  display: none;
+}
+.errorText {
+  position: absolute;
+  bottom: -1rem;
+  font-size: 12px;
+  color: red;
+}
+
+.newCommentContainerErr {
+  box-shadow: 0px 0px 10px 5px #951515;
+}
+.inputErr {
+  border-color: #951515 !important;
+  &::placeholder {
+    color: #951515 !important;
+  }
+}
